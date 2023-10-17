@@ -1,0 +1,20 @@
+.title {
+    margin-bottom: 10rem;
+    font-size: 56px;
+    width: 100vw;
+}
+
+.button {
+    background-color: #DD3F3F;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #C00B0B;
+}
