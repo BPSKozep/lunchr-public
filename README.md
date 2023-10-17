@@ -13,9 +13,9 @@
 
 ## Telepítés
 
-1. `git clone https://github.com/BPSKozep/lunchr-public`
-2. `cd lunchr-public`
-3. `npm install`
+1. ```git clone https://github.com/BPSKozep/lunchr-public```
+2. ```cd lunchr-public```
+3. ```npm install```
 4. `.env fájl kitöltése`
     1. `MONGODB_URI=[MongoDB connection string]`
     2. `MONGODB_DATABASE=[Adatbázis neve]`
@@ -23,6 +23,6 @@
 
 MongoDB-hez ajánljuk a [cloud.mongodb.com](https://cloud.mongodb.com/)-ot.
 
-5. `npm run build`
-6. `npm run start`
-7. `http://localhost:3000` megnyitása böngészőben
+5. ```npm run build```
+6. ```npm run start```
+7. [localhost:3000](http://localhost:3000) megnyitása böngészőben
