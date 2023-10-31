@@ -4,7 +4,12 @@
 
 ---
 
-# Telepítés
+# Demo / Hosted verzió
+
+https://lunchr.bpskozep.hu
+
+
+# Egyéni Telepítés
 
 ### Szükséges programok:
 - [Node.js](https://nodejs.org/en/)
