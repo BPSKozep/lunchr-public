@@ -1,6 +1,10 @@
 # Lunchr-public
 
-## A Lunchr projekt publikus verziója
+## A projekt lényege
+
+Mi egy relatív új iskolába járunk, ez jelenleg a 5. éve a sulinak és mindig is szükségünk volt valamilyen fajta ebédrendszerre. Egy olyanra, ahol a rendeléseket online lehet leadni és az ebédidőben, pedig emberek szerint kiolvasni azt. Készítettünk erre egy weboldalt, ami kiírja az alkalmazottaknak a rendeléseket, egy tokenrendszert, amiben mindenkinek van egy saját fizikai tokenje, amit ebédkor oda kell érinteni az olvasóhoz és végül egy form-ot, ahol a rendeléseket lehet leadni minden pénteken.
+
+A Lunchr gazdák: Martin & Márk
 
 ---
 
