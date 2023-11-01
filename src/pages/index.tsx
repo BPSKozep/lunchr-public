@@ -2,7 +2,6 @@ import { trpc } from "utils/trpc";
 import { useEffect, useState } from "react";
 import type { Socket } from "socket.io-client";
 import CountsTable from "components/CountsTable";
-import NumpadInput from "components/NumpadInput";
 import Head from "next/head";
 import styles from "styles/Home.module.css";
 import Image from "next/image";
@@ -153,8 +152,8 @@ export default function Home() {
                 >
                     NFC Érintés
                 </button>
-                <div className="my-2 border-none bg-red-600 transition-all rounded-lg text-sm h-10 w-60 text-center justify-center">
-                    <label className="relative inline-flex items-center cursor-pointer">
+                <div className="my-4 border-none bg-red-600 transition-all rounded-lg text-sm h-10 w-60 text-center justify-center flex items-center">
+                    <label className="relative flex items-center cursor-pointer">
                         <input
                             type="checkbox"
                             value=""
