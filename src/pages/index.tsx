@@ -148,7 +148,7 @@ export default function Home() {
             <div className="absolute m-8">
                 <button
                     className="border-none bg-red-600 p-3 hover:bg-red-400 transition-all rounded-lg text-sm"
-                    onClick={() => {}}
+                    onClick={() => setNfcId("5b641345")}
                 >
                     NFC Érintés
                 </button>
