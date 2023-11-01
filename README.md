@@ -10,15 +10,16 @@ A Lunchr gazdák: Martin & Márk
 
 # Folyamatábrák
 
-[Folyamatábra_pentek.pdf](https://github.com/BPSKozep/lunchr-public/files/13226752/Folyamatabra_pentek.pdf)
+[Folyamatabra_pentek.pdf](https://github.com/BPSKozep/lunchr-public/files/13226752/Folyamatabra_pentek.pdf)
 
 ![image](https://github.com/BPSKozep/lunchr-public/assets/56265261/c0f3d17e-8b9a-4d74-a06e-2b55cee9184f)
 
 ---
 
-[Folyamatábra_kovetkezo_het.pdf](https://github.com/BPSKozep/lunchr-public/files/13226757/Folyamatabra_kovi_het.pdf)
+[Folyamatabra_kovetkezo_het.pdf](https://github.com/BPSKozep/lunchr-public/files/13231373/Folyamatabra_kovi_het.pdf)
 
-![image](https://github.com/BPSKozep/lunchr-public/assets/56265261/307aa360-6ae6-4571-9a01-8dc8dbfc2880)
+![image](https://github.com/BPSKozep/lunchr-public/assets/56265261/f4a49788-0b90-44cc-a6ea-d73ca73198e7)
+
 
 # Demo / Hosted verzió
 
