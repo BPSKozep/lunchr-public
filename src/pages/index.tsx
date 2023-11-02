@@ -5,12 +5,47 @@ import CountsTable from "components/CountsTable";
 import Head from "next/head";
 import styles from "styles/Home.module.css";
 import Image from "next/image";
-import { spawn } from "child_process";
+
+const ids = [
+    "5b641345",
+    "6bcdf544",
+    "1329a4de",
+    "2bd50545",
+    "1bdaf844",
+    "fb891345",
+    "933c9dde",
+    "fbf51145",
+    "3132ae74",
+    "83bb9bde",
+    "cb83f444",
+    "6be90545",
+    "a13aae74",
+    "cb900145",
+    "bbe90545",
+    "61f9ac74",
+    "5b83f444",
+    "8ba7ed44",
+    "3b581345",
+    "f35d9dde",
+    "8bb70f45",
+    "b1e9ac74",
+    "e3609cde",
+    "73549dde",
+    "8b9d1345",
+    "c31a8dde",
+    "ebd10545",
+    "eb91f444",
+    "4b921345",
+    "d3bc9bde",
+    "000000",
+    "000001",
+];
 
 export default function Home() {
     const [socketFailure, setSocketFailure] = useState<boolean>(false);
     const [socket, setSocket] = useState<Socket | null>(null);
     const [nfcId, setNfcId] = useState<string>("");
+    const [isSimulating, setIsSimulating] = useState(false);
     const {
         data: orderData,
         dataUpdatedAt,
@@ -40,13 +75,17 @@ export default function Home() {
         {}
     ); // stores the count of each specific order
     const { mutate } = trpc.order.setCompleted.useMutation();
+    const { mutate: deleteOrderData } =
+        trpc.order.deleteAllOrderDataYesImNotKiddingThisWillReallyDeleteAllOrderData.useMutation();
     const [profileImageURL, setProfileImageURL] = useState<string>(
-        `https://cdn.bpskozep.hu/no_picture.png`
+        `https://lunchr-cdn.bpskozep.hu/no_picture.png`
     );
 
     useEffect(() => {
         if (userData?.email)
-            setProfileImageURL(`https://cdn.bpskozep.hu/${userData?.email}`);
+            setProfileImageURL(
+                `https://lunchr-cdn.bpskozep.hu/${userData?.email}.png`
+            );
     }, [userData]);
 
     // useEffect(() => {
@@ -108,6 +147,28 @@ export default function Home() {
         }
     }, [orderData]);
 
+    useEffect(() => {
+        let interval: NodeJS.Timer | null = null;
+
+        if (isSimulating) {
+            setNfcId(ids[Math.floor(Math.random() * ids.length)]);
+
+            interval = setInterval(() => {
+                setNfcId(ids[Math.floor(Math.random() * ids.length)]);
+            }, 5000);
+        }
+
+        if (!isSimulating) {
+            interval && clearInterval(interval);
+
+            interval = null;
+        }
+
+        return () => {
+            interval && clearInterval(interval);
+        };
+    }, [isSimulating]);
+
     if (socketFailure) {
         return (
             <>
@@ -148,18 +209,31 @@ export default function Home() {
             <div className="absolute m-8">
                 <button
                     className="border-none bg-red-600 p-3 hover:bg-red-400 transition-all rounded-lg text-sm"
-                    onClick={() => setNfcId("5b641345")}
+                    onClick={() =>
+                        setNfcId(ids[Math.floor(Math.random() * ids.length)])
+                    }
                 >
                     NFC Érintés
                 </button>
-                <div className="my-4 border-none bg-red-600 transition-all rounded-lg text-sm h-10 w-60 text-center justify-center flex items-center">
+                <button
+                    className="border-none bg-red-600 p-3 hover:bg-red-400 transition-all rounded-lg text-sm ml-3"
+                    onClick={() => {
+                        deleteOrderData();
+                        setOrderCounts({});
+                        setNfcId("");
+                    }}
+                >
+                    Adatbázis visszaállítása
+                </button>
+                <div className="my-4 border-none bg-red-600 transition-all rounded-lg text-sm h-10 w-100 text-center justify-center flex items-center">
                     <label className="relative flex items-center cursor-pointer">
                         <input
                             type="checkbox"
-                            value=""
-                            className="sr-only peer"
+                            checked={isSimulating}
+                            className="hidden peer"
+                            onChange={(e) => setIsSimulating(e.target.checked)}
                         />
-                        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                         <span className="ml-3 text-sm font-medium text-white">
                             Ebédeltetés szimulálása
                         </span>
@@ -187,7 +261,7 @@ export default function Home() {
                             width={200}
                             onError={() =>
                                 setProfileImageURL(
-                                    "https://cdn.bpskozep.hu/no_picture.png"
+                                    "https://lunchr-cdn.bpskozep.hu/no_picture.png"
                                 )
                             }
                         />
