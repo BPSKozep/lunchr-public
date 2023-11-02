@@ -1,6 +1,6 @@
 .table_container {
     font-size: 40px;
-
+    align-items: center;
     border: solid white 2px;
     border-radius: 10px;
 }

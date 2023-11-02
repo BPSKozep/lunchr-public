@@ -17,35 +17,39 @@ function CountsTable({ counts }: { counts: { [key: string]: number } }) {
 
     return (
         <div className={styles.table_container}>
-            <table className={styles.table}>
-                {Object.entries(counts).map(([key, value]) => {
-                    return (
-                        <tr key={key} className={styles.row}>
-                            <th>{key}</th>
-                            <td>
-                                {manualCounts[key]
-                                    ? value + manualCounts[key]
-                                    : value}
-                            </td>
-                            <div className={styles.manual_div}>
-                                <button
-                                    onClick={() =>
-                                        setManualCounts((prev) => {
-                                            prev[key] = prev[key]
-                                                ? prev[key] + 1
-                                                : 1;
-                                            router.push("/");
-                                            return prev;
-                                        })
-                                    }
-                                    className={styles.manual_count}
-                                >
-                                    +
-                                </button>
-                            </div>
-                        </tr>
-                    );
-                })}
+            <table>
+                <tbody className={styles.table}>
+                    {Object.entries(counts).map(([key, value]) => {
+                        return (
+                            <tr key={key} className={styles.row}>
+                                <th>{key}</th>
+                                <td>
+                                    {manualCounts[key]
+                                        ? value + manualCounts[key]
+                                        : value}
+                                </td>
+                                <td>
+                                    <button
+                                        onClick={() =>
+                                            setManualCounts((prev) => {
+                                                const oldPrev = { ...prev };
+
+                                                oldPrev[key] = oldPrev[key]
+                                                    ? oldPrev[key] + 1
+                                                    : 1;
+
+                                                return oldPrev;
+                                            })
+                                        }
+                                        className="mouse-pointer text-center h-12 bg-slate-400 rounded-s aspect-square text-2xl m-2"
+                                    >
+                                        +
+                                    </button>
+                                </td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
             </table>
         </div>
     );
