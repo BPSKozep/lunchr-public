@@ -2,13 +2,14 @@
 
 ## A projekt lényege
 
-Mi egy relatív új iskolába járunk, ez jelenleg a 5. éve a sulinak és mindig is szükségünk volt valamilyen fajta ebédrendszerre. Egy olyanra, ahol a rendeléseket online lehet leadni és az ebédidőben, pedig emberek szerint kiolvasni azt. Készítettünk erre egy weboldalt, ami kiírja az alkalmazottaknak a rendeléseket, egy tokenrendszert, amiben mindenkinek van egy saját fizikai tokenje, amit ebédkor oda kell érinteni az olvasóhoz és végül egy form-ot, ahol a rendeléseket lehet leadni minden pénteken.
+Iskolánk pár éve alakult, és az ebédek kiválasztására, megrendelésére, kiosztására nem volt jól bejáratott rendszerünk. Ezen szerettünk volna segíteni, amikor létrehoztuk Lunchr rendszerünket. A rendszer a következőképpen működik: A tanárok és diákok egy online felületen leadják rendelésüket a következő hétre (ahova az iskolatitkár előzőleg feltöltötte az étlapot). Mindenkinek saját fizikai tokenje van, ez azonosítja őt, ezt használja ebédelésnél. Ebédkor az ebédlőben található olvasóhoz kell érinteni a tokent, ekkor a konyhásoknál lévő monitoron rögtön megjelenik a diák neve, fényképe, és a rendelt étel. Rendszerünk egyrészt segíti a diákokat és tanárokat, hiszen egyszer kiválasztják az ételeket, utána nem kell emlékezni arra, hogy mit rendeltek, és segíti a konyhásokat is, hiszen pontosan látják ki mit rendelt, mit kell neki odaadni, nincs tévesztés, nincs variálás az ételekkel.
+A rendszer folyamatosan változik, a konyhások, diákok és tanárok kérésére már több új funkció bekerült a kezdetekhez képest. Például a konyhások látják a konyhában lévő monitoron, hogy miből hány adag fogyott, ezen ők tudnak változtatni, vagy pl. a monitoron megjelenik a diák fényképe is, így nincs visszaélés egymás tokenjeivel, a konyhások látják kinek kell odaadni az ételt.
 
 A Lunchr gazdák: Martin & Márk
 
 ---
 
-# Folyamatábrák
+# Folyamatábráink
 
 [Folyamatabra_pentek.pdf](https://github.com/BPSKozep/lunchr-public/files/13226752/Folyamatabra_pentek.pdf)
 
@@ -20,18 +21,53 @@ A Lunchr gazdák: Martin & Márk
 
 ![image](https://github.com/BPSKozep/lunchr-public/assets/56265261/f4a49788-0b90-44cc-a6ea-d73ca73198e7)
 
-
 # Demo / Hosted verzió
 
-https://lunchr.bpskozep.hu
+## https://lunchr.bpskozep.hu
 
+# Demo használata és még több információ
+
+A Demo verziót azért hoztuk létre, hogy a projektet meg lehessen tekinteni úgy, hogy az a mi adatbázisunktól és diákjainktól külön legyen és extra funkciókkal könnyű legyen kipróbálni.
+
+## Mit csinálnak a gombok?
+
+A Demo verzióhoz csináltunk pár extra funkciót, amit szimulálni tudják az egyes token érintéseket és az adatbázist is tudják törölni.
+
+-   NFC Érintés
+
+    -   Ez a gomb kiválaszt egy random diákot és szimulálja azt, mintha az olvasóhoz érintené a tokent.
+    -   Ha ez a felhasználó még nem ebédelt a héten, akkor létrehoz neki egy random választott menüt
+
+-   Adatbázis visszaállítása
+
+    -   Létrehoztunk egy API lekérést, ami összesen annyit teljesít, hogy törli az egész `orders` adatbázist.
+
+-   Ebédeltetés szimulálása
+
+    -   Ez egy kapcsolható gomb, ami 5 másodpercenként, az érintéshez hasonlóan választ egy random diákot.
+
+-   Jelenlegi email
+    -   Bár ez nem etgy gomb, de kiírja a jelenleg megjelenített felhasználó email-jét, ami az adatbázisban mellette van.
+
+## Hogy néz ki az adatbázis?
+
+A `db_scheme` mappában megtalálhatóak kis részletek arról, hogy miként néz ki nálunk a felhasználók és a rendelések eltárolása.
+
+-   [Users](https://github.com/BPSKozep/lunchr-public/blob/main/db_scheme/users_lunchr.json)
+
+-   [Orders](https://github.com/BPSKozep/lunchr-public/blob/main/db_scheme/orders_lunchr.json)
+
+## Mi változott az eredeti verzióhoz képest?
+
+// todo
 
 # Egyéni Telepítés
 
 ### Szükséges programok:
-- [Node.js](https://nodejs.org/en/)
-- [Git](https://git-scm.com/)
-- [MongoDB](https://www.mongodb.com/)
+
+-   [Node.js](https://nodejs.org/en/)
+-   [Git](https://git-scm.com/)
+-   [MongoDB](https://www.mongodb.com/)
 
 ## Telepítés
 
