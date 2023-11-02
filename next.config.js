@@ -11,7 +11,7 @@ const nextConfig = {
     },
     output: "standalone",
     images: {
-        domains: ["cdn.bpskozep.hu"],
+        domains: ["lunchr-cdn.bpskozep.hu"],
     },
 };
 
