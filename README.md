@@ -59,7 +59,9 @@ A `db_scheme` mappában megtalálhatóak kis részletek arról, hogy miként né
 
 ## Mi változott az eredeti verzióhoz képest?
 
-// todo
+A legtöbb változást az `index.tsx` fájlban kellett csinálnunk, így az eredeti megtalálható az `index.original.tsx` név alatt.
+
+Az eredeti verzióban más profilképekkel dolgozunk, ezért egy saját cdn szervert is létrehoztunk külön ennek.
 
 # Egyéni Telepítés
 
@@ -93,4 +95,4 @@ MongoDB-hez ajánljuk a [cloud.mongodb.com](https://cloud.mongodb.com/)-ot.
 6. ```sh
    npm run start
    ```
-7. [localhost:3000](http://localhost:3000) megnyitása böngészőben
+7. [localhost:3000](http://localhost:3001) megnyitása böngészőben
