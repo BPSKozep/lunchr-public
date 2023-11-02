@@ -60,35 +60,57 @@ export const orderRouter = router({
 
                 if (!user) return { user: null, order: null, failure: true };
 
-                await new orderModel({
+                const options = [
+                    "A menü",
+                    "B menü",
+                    "Tejmentes",
+                    "Gluténmentes",
+                    "Vegán",
+                    "Vegetáriánus",
+                    "Mindenmentes",
+                ];
+
+                const order = new orderModel({
                     user: input.nfcId,
                     order: {
                         monday: {
-                            chosen: process.env.FALLBACK_ORDER_TEXT as string,
+                            chosen: options[
+                                Math.floor(Math.random() * options.length)
+                            ],
                             completed: false,
                         },
                         tuesday: {
-                            chosen: process.env.FALLBACK_ORDER_TEXT as string,
+                            chosen: options[
+                                Math.floor(Math.random() * options.length)
+                            ],
                             completed: false,
                         },
                         wednesday: {
-                            chosen: process.env.FALLBACK_ORDER_TEXT as string,
+                            chosen: options[
+                                Math.floor(Math.random() * options.length)
+                            ],
                             completed: false,
                         },
                         thursday: {
-                            chosen: process.env.FALLBACK_ORDER_TEXT as string,
+                            chosen: options[
+                                Math.floor(Math.random() * options.length)
+                            ],
                             completed: false,
                         },
                         friday: {
-                            chosen: process.env.FALLBACK_ORDER_TEXT as string,
+                            chosen: options[
+                                Math.floor(Math.random() * options.length)
+                            ],
                             completed: false,
                         },
                     },
                     year: year,
                     weekNumber: week,
-                }).save();
+                });
 
-                orderToday = process.env.FALLBACK_ORDER_TEXT as string;
+                await order.save();
+
+                orderToday = order.order.wednesday.chosen as string;
             }
 
             if (orderToday === process.env.NO_ORDER_OPTION_TEXT) {
@@ -229,5 +251,9 @@ export const orderRouter = router({
                     },
                 ]),
             ];
+        }),
+    deleteAllOrderDataYesImNotKiddingThisWillReallyDeleteAllOrderData:
+        procedure.mutation(async () => {
+            await orderModel.deleteMany({});
         }),
 });
