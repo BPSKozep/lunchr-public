@@ -1,0 +1,349 @@
+[{
+  "_id": {
+    "$oid": "654373ad7f42a22c629b599e"
+  },
+  "user": "c31a8dde",
+  "order": {
+    "monday": {
+      "chosen": "B menü",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "Vegetáriánus",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "Vegetáriánus",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "Vegán",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Mindenmentes",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373b27f42a22c629b59a5"
+  },
+  "user": "5b83f444",
+  "order": {
+    "monday": {
+      "chosen": "Mindenmentes",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "B menü",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "Mindenmentes",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "A menü",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Mindenmentes",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373b77f42a22c629b59ac"
+  },
+  "user": "cb900145",
+  "order": {
+    "monday": {
+      "chosen": "Vegán",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "Vegetáriánus",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "Tejmentes",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "Gluténmentes",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Vegetáriánus",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373bc7f42a22c629b59b3"
+  },
+  "user": "5b641345",
+  "order": {
+    "monday": {
+      "chosen": "Vegán",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "Tejmentes",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "Vegetáriánus",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "A menü",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Tejmentes",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373c17f42a22c629b59ba"
+  },
+  "user": "933c9dde",
+  "order": {
+    "monday": {
+      "chosen": "A menü",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "Mindenmentes",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "A menü",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "Tejmentes",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Gluténmentes",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373c67f42a22c629b59c1"
+  },
+  "user": "2bd50545",
+  "order": {
+    "monday": {
+      "chosen": "Vegetáriánus",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "Tejmentes",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "Mindenmentes",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "Mindenmentes",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "A menü",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373cb7f42a22c629b59c8"
+  },
+  "user": "cb83f444",
+  "order": {
+    "monday": {
+      "chosen": "Vegetáriánus",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "Mindenmentes",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "Vegán",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "Gluténmentes",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Tejmentes",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373d07f42a22c629b59cf"
+  },
+  "user": "e3609cde",
+  "order": {
+    "monday": {
+      "chosen": "A menü",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "Mindenmentes",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "A menü",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "Gluténmentes",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Mindenmentes",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373d57f42a22c629b59d6"
+  },
+  "user": "b1e9ac74",
+  "order": {
+    "monday": {
+      "chosen": "Vegetáriánus",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "Vegán",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "A menü",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "Vegán",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Mindenmentes",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373da7f42a22c629b59dd"
+  },
+  "user": "000001",
+  "order": {
+    "monday": {
+      "chosen": "Tejmentes",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "Vegán",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "Vegetáriánus",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "Vegetáriánus",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Gluténmentes",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373df7f42a22c629b59e4"
+  },
+  "user": "3132ae74",
+  "order": {
+    "monday": {
+      "chosen": "B menü",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "B menü",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "A menü",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "Mindenmentes",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Vegán",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+},{
+  "_id": {
+    "$oid": "654373e47f42a22c629b59eb"
+  },
+  "user": "1bdaf844",
+  "order": {
+    "monday": {
+      "chosen": "Tejmentes",
+      "completed": false
+    },
+    "tuesday": {
+      "chosen": "Tejmentes",
+      "completed": false
+    },
+    "wednesday": {
+      "chosen": "Vegán",
+      "completed": false
+    },
+    "thursday": {
+      "chosen": "Mindenmentes",
+      "completed": true
+    },
+    "friday": {
+      "chosen": "Vegán",
+      "completed": false
+    }
+  },
+  "year": 2023,
+  "weekNumber": 44
+}]
