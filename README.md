@@ -27,6 +27,8 @@ A Lunchr gazdák: Martin & Márk
 
 Használat közbeni videó: https://links.markgyoni.dev/lunchr
 
+(Hétvégén a program nem működik, mert a rendszer csak hétköznapokat tartalmaz.)
+
 # Demo használata és még több információ
 
 A Demo verziót azért hoztuk létre, hogy a projektet meg lehessen tekinteni úgy, hogy az a mi adatbázisunktól és diákjainktól külön legyen és extra funkciókkal könnyű legyen kipróbálni.
