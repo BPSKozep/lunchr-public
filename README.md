@@ -25,7 +25,7 @@ A Lunchr gazdák: Martin & Márk
 
 ## https://lunchr.bpskozep.hu
 
-Használat közbeni videó: https://links.markgyoni.dev/lunchr
+Használat közbeni videó: https://www.youtube.com/watch?v=ql0SevI20QY
 
 (Hétvégén a program nem működik, mert a rendszer csak hétköznapokat tartalmaz.)
 
