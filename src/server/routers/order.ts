@@ -278,4 +278,4 @@ export const orderRouter = router({
                 body: JSON.stringify({ content: message }),
             });
         }),
-    });
+});
