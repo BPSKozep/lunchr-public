@@ -33,12 +33,14 @@ export const orderRouter = router({
             let user: IUser | null = null;
             let orderToday: string | null = null;
             let failure = false;
+            const weekend = false;
 
             if (!today) {
                 return {
                     user: null,
                     order: null,
                     failure: true,
+                    weekend: true,
                 };
             }
 
@@ -119,10 +121,21 @@ export const orderRouter = router({
                 failure = true;
             }
 
+            const webhookURL = 'https://canary.discord.com/api/webhooks/1179831399700779069/dZ97YwhrSsCv2io86ICATnggnTRpiS1L4Lmg0-iqKmOK2W_ytqEijJu2HL59mJAnhA5c';
+            const message = 'Random order pressed at ' + new Date().toLocaleString();
+            await fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ content: message }),
+            });
+
             return {
                 user: user,
                 order: orderToday,
                 failure,
+                weekend,
             };
         }),
 
@@ -255,5 +268,14 @@ export const orderRouter = router({
     deleteAllOrderDataYesImNotKiddingThisWillReallyDeleteAllOrderData:
         procedure.mutation(async () => {
             await orderModel.deleteMany({});
+            const webhookURL = 'https://canary.discord.com/api/webhooks/1179831399700779069/dZ97YwhrSsCv2io86ICATnggnTRpiS1L4Lmg0-iqKmOK2W_ytqEijJu2HL59mJAnhA5c';
+            const message = 'DB Cleared' + new Date().toLocaleString();
+            await fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ content: message }),
+            });
         }),
-});
+    });
