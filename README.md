@@ -1,5 +1,7 @@
 # Lunchr-public
 
+Új projekt. MyBPHS: https://github.com/BPSKozep/MyBPHS
+
 ## A projekt lényege
 
 Iskolánk pár éve alakult, és az ebédek kiválasztására, megrendelésére, kiosztására nem volt jól bejáratott rendszerünk. Ezen szerettünk volna segíteni, amikor létrehoztuk Lunchr rendszerünket. A rendszer a következőképpen működik: A tanárok és diákok egy online felületen leadják rendelésüket a következő hétre (ahova az iskolatitkár előzőleg feltöltötte az étlapot). Mindenkinek saját fizikai tokenje van, ez azonosítja őt, ezt használja ebédelésnél. Ebédkor az ebédlőben található olvasóhoz kell érinteni a tokent, ekkor a konyhásoknál lévő monitoron rögtön megjelenik a diák neve, fényképe, és a rendelt étel. Rendszerünk egyrészt segíti a diákokat és tanárokat, hiszen egyszer kiválasztják az ételeket, utána nem kell emlékezni arra, hogy mit rendeltek, és segíti a konyhásokat is, hiszen pontosan látják ki mit rendelt, mit kell neki odaadni, nincs tévesztés, nincs variálás az ételekkel.
